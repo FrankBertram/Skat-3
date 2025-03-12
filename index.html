@@ -8,7 +8,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>	
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
+	@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');	    
+        
+	body { font-family: Arial, sans-serif; text-align: center; }
         .hidden { display: none; }
         table { width: 98%; margin: 20px auto; border-collapse: collapse; }
         th, td { border: 1px solid black; padding: 10px; text-align: center; min-width: 20px; }
@@ -67,7 +69,7 @@
 			padding: 3px;
 			height: 18px;  /* Kleinere Höhe */
 			font-size: 16px;  /* Kleinere Schrift */
-		        font-family: 'Arial Narrow', Arial, sans-serif; /* Arial Narrow als Schriftart */			
+ 			font-family: 'Arial Narrow', 'Roboto Condensed', Arial, sans-serif; /* Roboto Condensed als Fallback */
 		}
 		
 
