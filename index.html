@@ -8,8 +8,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>	
     <style>
-	@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');	    
-        
 	body { font-family: Arial, sans-serif; text-align: center; }
         .hidden { display: none; }
         table { width: 98%; margin: 20px auto; border-collapse: collapse; }
@@ -69,7 +67,6 @@
 			padding: 3px;
 			height: 18px;  /* Kleinere Höhe */
 			font-size: 16px;  /* Kleinere Schrift */
- 			font-family: 'Arial Narrow', 'Roboto Condensed', Arial, sans-serif; /* Roboto Condensed als Fallback */
 		}
 		
 
@@ -275,32 +272,32 @@
             <tbody id="gameTableBody"></tbody>
             <tfoot>
                 <tr class="sum-row">
-                    <td>Summe</td>
-                    <td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td colspan="2">Summe</td>
+                    <td></td><td></td><td></td><td></td><td></td>
                     <td id="sum1">0</td><td id="sumG1">0</td><td id="sumV1">0</td>
                     <td id="sum2">0</td><td id="sumG2">0</td><td id="sumV2">0</td>
                     <td id="sum3">0</td><td id="sumG3">0</td><td id="sumV3">0</td>
 					<td id="sumEin">0</td>
                 </tr>
                 <tr class="sum-row">
-                    <td>+/- 50</td>
-                    <td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td colspan="2">+/- 50</td>
+                    <td></td><td></td><td></td><td></td><td></td>
                     <td id="wsum1">0</td><td></td><td></td>
                     <td id="wsum2">0</td><td></td><td></td>
                     <td id="wsum3">0</td><td></td><td></td>
 					<td></td>
                 </tr>				
                 <tr class="sum-row">
-                    <td>Gegner</td>
-                    <td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td colspan="2">Gegner</td>
+                    <td></td><td></td><td></td><td></td><td></td>
                     <td id="gsum1">0</td><td></td><td></td>
                     <td id="gsum2">0</td><td></td><td></td>
                     <td id="gsum3">0</td><td></td><td></td>
 					<td></td>
                 </tr>				
                 <tr class="sum-row">
-                    <td>Total</td>
-                    <td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td colspan="2">Total</td>
+                    <td></td><td></td><td></td><td></td><td></td>
                     <td id="tsum1">0</td><td></td><td></td>
                     <td id="tsum2">0</td><td></td><td></td>
                     <td id="tsum3">0</td><td></td><td></td>
