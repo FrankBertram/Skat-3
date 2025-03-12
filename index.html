@@ -61,12 +61,15 @@
 			border-collapse: collapse;  /* Ränder verschmelzen für kompaktere Darstellung */
 		}
 
+
 		/* Kopfzeile (thead) */
 		thead th {
 			padding: 3px;
 			height: 18px;  /* Kleinere Höhe */
-			font-size: 12px;  /* Kleinere Schrift */
+			font-size: 16px;  /* Kleinere Schrift */
+		        font-family: 'Arial Narrow', Arial, sans-serif; /* Arial Narrow als Schriftart */			
 		}
+		
 
 		/* Tabelleninhalt (tbody) */
 		#gameTableBody tr {
@@ -75,14 +78,14 @@
 
 		#gameTableBody td {
 			padding: 2px;  /* Weniger Abstand in den Zellen */
-			font-size: 12px;  /* Kleinere Schrift */
+			font-size: 16px;  /* Kleinere Schrift */
 		}
 
 		/* Fußzeile (tfoot, für Summenzeile) */
 		tfoot td {
 			padding: 3px;
 			height: 18px;  /* Kleinere Höhe */
-			font-size: 12px;
+			font-size: 16px;
 			font-weight: bold;  /* Falls die Summe hervorgehoben werden soll */
 		}
 
@@ -445,14 +448,14 @@
                 document.getElementById("sumV" + (i + 1)).textContent = losses[i];
                 document.getElementById("wsum" + (i + 1)).textContent = (wins[i]-losses[i])*50;
             });
-			document.getElementById("gsum1").textContent = (losses[1]+losses[2]+losses[3])*30;
-			document.getElementById("gsum2").textContent = (losses[0]+losses[2]+losses[3])*30;
-			document.getElementById("gsum3").textContent = (losses[0]+losses[1]+losses[3])*30;
-			//document.getElementById("gsum4").textContent = (losses[0]+losses[1]+losses[2])*30;
-			document.getElementById("tsum1").textContent = scores[0]+(wins[0]-losses[0])*50+(losses[1]+losses[2]+losses[3])*30;
-			document.getElementById("tsum2").textContent = scores[1]+(wins[1]-losses[1])*50+(losses[0]+losses[2]+losses[3])*30;
-			document.getElementById("tsum3").textContent = scores[2]+(wins[2]-losses[2])*50+(losses[0]+losses[1]+losses[3])*30;
-			//document.getElementById("tsum4").textContent = scores[3]+(wins[3]-losses[3])*50+(losses[0]+losses[1]+losses[2])*30;
+			document.getElementById("gsum1").textContent = (losses[1]+losses[2]+losses[3])*40;
+			document.getElementById("gsum2").textContent = (losses[0]+losses[2]+losses[3])*40;
+			document.getElementById("gsum3").textContent = (losses[0]+losses[1]+losses[3])*40;
+			//document.getElementById("gsum4").textContent = (losses[0]+losses[1]+losses[2])*40;
+			document.getElementById("tsum1").textContent = scores[0]+(wins[0]-losses[0])*50+(losses[1]+losses[2]+losses[3])*40;
+			document.getElementById("tsum2").textContent = scores[1]+(wins[1]-losses[1])*50+(losses[0]+losses[2]+losses[3])*40;
+			document.getElementById("tsum3").textContent = scores[2]+(wins[2]-losses[2])*50+(losses[0]+losses[1]+losses[3])*40;
+			//document.getElementById("tsum4").textContent = scores[3]+(wins[3]-losses[3])*50+(losses[0]+losses[1]+losses[2])*40;
 			document.getElementById("sumEin").textContent = passes;
         }
 
