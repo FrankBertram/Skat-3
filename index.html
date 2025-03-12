@@ -318,6 +318,16 @@
         let losses = [0, 0, 0, 0];
 		let passes = 0;
 		
+	    document.addEventListener('DOMContentLoaded', () => {
+			const table = document.querySelector('table');
+        
+			table.addEventListener('input', (event) => {
+				if (event.target.tagName === 'TD') {
+					saveTableData();
+				}
+			});
+		});
+		
 		document.addEventListener("DOMContentLoaded", function () {
 			let gameTypeSelect = document.getElementById("gameType");
 			gameTypeSelect.value = "Grand"; // Standardmäßig auf "Grand" setzen
@@ -624,6 +634,7 @@
 				updatePlayerOptions();
 				updateGameHeader();  // Diese Zeile NEU einfügen!
 				checkGameEnd();
+				saveTableData();
 				document.getElementById("mitBube").selectedIndex = 0;
 				document.getElementById("gwStufe").selectedIndex = 0;
 			}	
@@ -807,6 +818,22 @@
 				console.error("Fehler beim Laden der Excel-Datei:", error);
 			}
 		}
+		
+		function saveTableData() {
+			const rows = Array.from(document.querySelectorAll('#gameTableBody tr'));
+			const data = rows.map(row => {
+				const cells = Array.from(row.querySelectorAll('td'));
+				return cells.map(cell => cell.innerText.trim());
+			});
+
+			fetch('save_data.php', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ data: data })
+			}).then(response => response.text())
+			  .then(result => console.log('Daten gespeichert:', result))
+			  .catch(error => console.error('Fehler beim Speichern:', error));
+		}	
 
 
 
